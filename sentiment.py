@@ -2,12 +2,12 @@
 import streamlit as st
 import tensorflow as tf
 from tensorflow.keras.models import load_model
-import pickle
+import joblib
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
 # Load tokenizer and models
-with open('tokenizer2.pkl', 'rb') as handle:
-    tokenizer = pickle.load(handle)
+# Load the tokenizer
+tokenizer = joblib.load('tokenizer2.joblib')
 
 # Load the models
 rnn_model = load_model('rnn_sentiment_model5.h5')
