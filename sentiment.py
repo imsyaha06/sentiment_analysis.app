@@ -21,7 +21,7 @@ st.write("This app predicts the sentiment (positive or negative) of a given text
 model_choice = st.sidebar.selectbox("Choose a model:", ("RNN", "LSTM"))
 
 # Text input
-user_input = st.text_area("Enter a review:", "This product is great!")
+user_input = st.text_area("Enter a text:")
 
 # Preprocess the input
 if user_input:
