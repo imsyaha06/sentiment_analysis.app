@@ -3,22 +3,15 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-import pickle
+import joblib
 
 # Load the model
-try:
-    model = tf.keras.models.load_model('rnn_sentiment_model5.h5')
-except Exception as e:
-    st.error(f"Error loading model: {e}")
-    model = None
+model = tf.keras.models.load_model('rnn_sentiment_model5.h5')
+ 
 
 # Load the tokenizer
-try:
-    with open('tokenizer2.pkl', 'rb') as handle:
-        tokenizer = pickle.load(handle)
-except Exception as e:
-    st.error(f"Error loading tokenizer: {e}")
-    tokenizer = None
+tokenizer = joblib.load('tokenizer2.joblib')
+
 
 # Streamlit app title and introduction
 st.title("Sentiment Analysis with RNN")
