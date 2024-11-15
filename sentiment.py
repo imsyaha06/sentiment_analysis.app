@@ -11,7 +11,7 @@ tokenizer = joblib.load('tokenizer2.joblib')
 
 # Load the models
 rnn_model = load_model('rnn_sentiment_model5.h5')
-lstm_model = load_model('lstm_sentiment_model.h5')
+lstm_model = load_model('lstm_sentiment_model5.h5')
  
 # Streamlit app
 st.title("Sentiment Analysis Comparison: RNN and LSTM")
