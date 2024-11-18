@@ -7,10 +7,10 @@ import joblib
 
 # Load the models
 lstm_model = tf.keras.models.load_model('yelp_sentiment_lstm_model.h5')
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+lstm_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 rnn_model = tf.keras.models.load_model('rnn_sentiment_model5.h5')
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+rnn_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Load the tokenizer
 tokenizer = joblib.load('tokenizer.joblib')
